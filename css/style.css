@@ -819,6 +819,7 @@ span{
         margin: 1em 0;
         border: 1px solid  rgb(192, 191, 191);
         background-color: rgb(14, 13, 13);
+       
     }
 }
 @media screen and (min-width:768px){
@@ -834,7 +835,9 @@ span{
     background-color: rgb(14, 13, 13);
    }
    
-   .tarj:hover{
+   
+}
+.tarj:hover{
     border: 1px solid #ff0800;
     box-shadow: 2px 2px 2px #fff, 2px 2px 3px #ff0800 ;
     background-color:black;
@@ -842,7 +845,6 @@ span{
     transform: scale(1.1,1.1);
     transition: all .5s;
     }
-}
 
 .tarj i{
     font-size: 2em;
@@ -884,8 +886,8 @@ span{
 }
 @keyframes titleAn{
     0% {
-       opacity: 0;
-       color: #fff;
+       opacity: 1;
+       color: #ff0800;
        
     }
      25%{
