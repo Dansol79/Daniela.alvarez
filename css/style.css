@@ -21,7 +21,7 @@ img{
     max-width: 100%;
 }
 /*Navbar*/
-header{
+.heard{
     width: 100%;
     background-color: rgb(26, 25, 25);
     display: flex;
@@ -71,7 +71,7 @@ header{
 
 }
 
-.head_img .logo{
+.head__logo{
     width: 40px;
     height: 40px;
     border: 1px solid #fff;
