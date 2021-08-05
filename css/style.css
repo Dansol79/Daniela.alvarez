@@ -558,12 +558,18 @@ span{
     background-color: transparent;
     border-radius: 10px ;
     border: 1px solid #ff0800;
+    box-shadow: 1px 1px 2px rgb(211, 47, 41), 1px 1px 2px rgb(250, 18, 10) ;
     color: rgb(155, 151, 151);
     font-size: .8em;
     margin-bottom: .8em;
     padding: .5em;
 }
-
+.divFlexB input:hover{
+    cursor: pointer;
+    border:solid 1px #ff0800;
+    box-shadow: inset 2px 2px 2px rgb(250, 18, 10) , inset 2px 2px 2px rgb(211, 47, 41) ;
+    
+}
 @media screen and (min-width:480px){
     .divFlex{
         flex-direction: row;
@@ -776,11 +782,17 @@ span{
 
 .btn{
     background-color: transparent;
-    border: 1px solid#ff0800;
+    border: 1px solid #ff0800;
+    box-shadow: 2px 2px 2px rgb(211, 47, 41), 2px 2px 2px rgb(250, 18, 10) ;
     padding: .5rem;
     border-radius: 10px;
     text-transform: uppercase;
     color:#fff ;
+}
+.btn:hover{
+    cursor: pointer;
+    border:solid 1px #ff0800;
+    box-shadow: inset 2px 2px 2px rgb(250, 18, 10) , inset 2px 2px 2px rgb(211, 47, 41) ;
 }
 
 /* Seccion 2 */
@@ -831,16 +843,16 @@ span{
    .tarj{
     width: 17%;
     height: 450px;
-    border: 1px solid  rgb(192, 191, 191);
+    border: 1px solid rgb(192, 191, 191) ;
     background-color: rgb(14, 13, 13);
    }
    
-   
+  
 }
 .tarj:hover{
-    border: 1px solid #ff0800;
-    box-shadow: 2px 2px 2px #fff, 2px 2px 3px #ff0800 ;
-    background-color:black;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px rgb(56, 55, 55), 3px 3px 5px #3f3939 ;
+    background-color:rgb(29, 28, 28);
     border-radius: 10px;
     transform: scale(1.1,1.1);
     transition: all .5s;
@@ -859,6 +871,7 @@ span{
 .tarj ul li{
     list-style: none;
     color: rgb(161, 159, 159);
+    padding: .4rem;
     text-align: center;
    
 }
