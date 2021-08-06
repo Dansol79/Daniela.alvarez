@@ -35,7 +35,7 @@ img{
 }
 
 
-.navMenu label{
+.nav__Menu label{
     display: none;
     color: #ff0800;
     text-transform: uppercase;
@@ -46,27 +46,27 @@ img{
     height: 40px;
     padding: 8px;
 }
-.navMenu label:hover{
+.nav__Menu label:hover{
     cursor: pointer;
     color: #fff;
 }
-.menu ul{
+.menu__ul{
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
 }
-.menu li a{
+.menu__enlace{
     display: block;
     font-size: 1.2rem;
     padding: .5em 1.5em;
     color: #f1f0db;
     text-decoration: none;
 }
-.menu li a:hover{
+.menu__enlace:hover{
     color: #ff0800;
 }
-.menu li:hover{
+.menu__list:hover{
     background-color:#333;
 
 }
@@ -88,7 +88,7 @@ img{
         
     }
     
-    .navMenu label{
+    .nav__Menu label{
         margin-top: 1em;
         display:block;
     }
@@ -101,21 +101,21 @@ img{
         z-index: 2;
     }
     
-    .menu li a{
+    .menu__enlace{
         display: block;
         font-size: 1rem;
         padding: 20px;
         color: #ff0800;
         text-decoration: none;
     }
-    .menu ul{
+    .menu__ul{
         flex-direction: column;
 
     }
-    .menu li{
+    .menu__list{
         border-top: 1px solid #fff;
     }
-    .menu li:hover{
+    .menu__list:hover{
         background-color: #333;
     }
     #btn-menu:checked ~ .menu{
@@ -130,7 +130,7 @@ img{
         
     }
     
-    .navMenu label{
+    .nav__Menu label{
         margin-top: 1em;
         display:block;
         font-size: 1.7em;
@@ -144,21 +144,21 @@ img{
         z-index: 2;
     }
     
-    .menu li a{
+    .menu__enlace{
         display: block;
         font-size: 1rem;
         padding: 20px;
         color: #ff0800;
         text-decoration: none;
     }
-    .menu ul{
+    .menu__ul{
         flex-direction: column;
 
     }
-    .menu li{
+    .menu__list{
         border-top: 1px solid #fff;
     }
-    .menu li:hover{
+    .menu__list:hover{
         background-color: #333;
     }
     #btn-menu:checked ~ .menu{
@@ -173,32 +173,32 @@ img{
         width: 50px;
         height: 50px;
     }
-    .menu li a{
+    .menu__enlace{
         font-size: 1em;
     }
 }
 
 @media (min-width: 1024px){
-    .menu li a{
+    .menu__enlace{
         font-size: 1.4em;
     }
 }
 /*footer*/
 
-.contendFooter{
+.contend__Footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color:#06060e;
     border-top:  rgb(155, 151, 151) 1px solid;
 }
-.contedPrincipal{
+.conted__Principal{
     background-color:#06060e;
     display: flex;
     justify-content:center;
     padding: 20px auto;
 }
-.footer_enlace{
+.footer__enlace{
     text-decoration: none;
     background-color: #06060e;
     color: rgb(155, 151, 151);
@@ -209,17 +209,17 @@ img{
     font-size: .8rem;
     text-transform: uppercase;
 }
-.footer_paragrafh{
+.footer__paragrafh{
     color:  rgb(155, 151, 151);
     font-size: 13px;
     letter-spacing: .3em;
     margin-top: .5em;
     
 }
-.footer_enlace:hover{
+.footer__enlace:hover{
     color: #ff0800;
 }
-.contedPrincipal i{
+.footer__ico{
     margin: 0 .7em;
     font-size: 25px;
     color:  rgb(155, 151, 151);
@@ -237,7 +237,7 @@ img{
     font-size: 10px;
 }
 @media screen and (min-width:768px){
-    .footer_paragrafh{
+    .footer__paragrafh{
         font-size: 15px;
     }
     .copyright{
@@ -247,7 +247,7 @@ img{
 
 /*seccion primera*/
 
-.seccionPrimera .contenedor{
+.seccionUno__contenedor{
     display: flex;
 	justify-content: center;
 	align-items: center;
@@ -255,14 +255,14 @@ img{
 	min-height: 600px;
     
 } 
-.stylephoto{
+.contenedor__photo{
     background-image: url(../images/mujerpe-min.jpg);
     background-repeat:no-repeat;
 	background-size: cover;
 	background-position: center center;
     
 }
- .title1{
+ .contenedor__title1{
     font-size: 3.85rem;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -270,13 +270,12 @@ img{
 	color: #ff0800;
 	text-shadow: 4px 1px 4px  #0b0c0b, 4px 1px 8px  #ebf1eb;
     padding-top: .2em;
-    
  }
  
-.titleSec{
+/* .titleSec{
     font-size: 4em;
     text-shadow: red 2px 4px 4px;
-}
+} */
 /*Nuestro Equipo seccion 1*/
 
 .titleSecond{
@@ -797,7 +796,7 @@ span{
 
 /* Seccion 2 */
 
-.container{
+.article__container{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -805,7 +804,7 @@ span{
     align-items: center;
 }
 
-.tarj{
+.container__tarj{
     display: flex;
     flex-direction: row;
     justify-content:space-around;
@@ -818,13 +817,13 @@ span{
 }
 
 @media screen and (min-width:320px){
-    .container{
+    .article__container{
         flex-direction: column;
         flex-wrap: nowrap;
         height: 1024px;
     }
 
-    .tarj{
+    .container__tarj{
         flex-direction: column;
         width: 50%;
         height: 400px;
@@ -835,12 +834,12 @@ span{
     }
 }
 @media screen and (min-width:768px){
-    .container{
+    .article__container{
         flex-direction: row;
         height: 600px;
     }
     
-   .tarj{
+   .container__tarj{
     width: 17%;
     height: 450px;
     border: 1px solid rgb(192, 191, 191) ;
@@ -849,7 +848,7 @@ span{
    
   
 }
-.tarj:hover{
+.container__tarj:hover{
     border: 1px solid black;
     box-shadow: 3px 3px 5px rgb(56, 55, 55), 3px 3px 5px #3f3939 ;
     background-color:rgb(29, 28, 28);
@@ -858,17 +857,17 @@ span{
     transition: all .5s;
     }
 
-.tarj i{
+.traj__ico{
     font-size: 2em;
     color: rgb(161, 159, 159);
     text-align: center;
 }
-.tarj h3{
+.tarj__title3{
     color: rgb(161, 159, 159);
     text-align: center;
     font-size: 1.5em;
 }
-.tarj ul li{
+.tarj__list{
     list-style: none;
     color: rgb(161, 159, 159);
     padding: .4rem;
@@ -877,8 +876,9 @@ span{
 }
 
 /*seccion3*/
-.titleAn{
+.contend__titleAn{
     font-size: 1.1em;
+    text-align: center;
     color: #fff;
     animation-name: titleAn;
     animation-iteration-count: infinite;
@@ -887,13 +887,13 @@ span{
     
 }
 @media screen and (min-width: 320px){
-    .contendVideo .titleAn{
+    .contend__titleAn{
         font-size: 1em;
     } 
 }
 
 @media screen and (min-width:780px) {
-    .contendVideo .titleAn{
+    .contend__titleAn{
         font-size: 1.5em;
     }    
 }
@@ -919,7 +919,7 @@ span{
 }
 
 
-.contendVideo{
+.contend__Video{
     width: 100%;
     margin-top: 2em;
 }
