@@ -275,31 +275,26 @@ img{
 /* .titleSec{
     font-size: 4em;
     text-shadow: red 2px 4px 4px;
-} */
+}  */
 /*Nuestro Equipo seccion 1*/
 
-.titleSecond{
+.seccion__titleSecond{
     flex: 0 1 100%;
     text-align: center;
-    margin: 0.2em auto;
-    color: #ff0800;
+    margin: 1em auto;
+    color: #fff;
     font-size: 1.5em;
     
 }
-.seccionNuestro:hover h2{
-    color:#fff;
-    
-}
 
-
-.titleThird{
+.somos__titleThird{
     align-items: center;
     color: #f1f0db;
     font-size: 16px;
     text-transform: uppercase;
     text-align: center;
 }
-.paragraph1{
+.somos__paragraph1{
     color: #f1f0db;
     font-size: 13px;
     text-transform: uppercase;
@@ -307,14 +302,14 @@ img{
     
 }
 
-.seccionNuestro{
+.seccion__Nuestro{
     max-width: 1100px;
     border: none;
     margin:0 auto;
     
 }
 
-.contendorPrincipal{
+.article__contendorP{
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
@@ -324,7 +319,7 @@ img{
 
 }
 
-.somos img{
+.somos_photo{
     max-width: 100%;
     width: 200px;
     height: 200px;
@@ -333,27 +328,29 @@ img{
     border-radius: 10px;
     box-shadow: 4px 3px 15px rgb(5, 5, 5);
 }
-.somos:hover img{
+.contenedor__somos:hover .somos_photo{
     border: 1px solid rgb(248, 34, 34);
     transform: scale(1.1,1.1);
     transition: all .5s;
 } 
 
-
-
 @media screen and (min-width: 480px){
     
-    .somos{ 
+    .contenedor__somos{ 
         
         text-align: center;
     } 
-    .somos:hover img{
+    .contenedor__somos:hover .somos_photo{
         transform: scale(1.1,1.1);  
     }
 }
 
 @media screen and (min-width:768px){
-    .contendorPrincipal{
+    
+    .seccion__titleSecond{
+        font-size: 2em;
+    }
+    .article__contendorP{
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -362,17 +359,17 @@ img{
     margin-bottom: 3em;
 
     } 
-    .somos{ 
+    .contenedor__somos{ 
         flex: 0 1 calc(33% - 1rem);
         text-align: center;
         margin-bottom: 2em;
     } 
-    .somos img{
+    .somos_photo{
         max-width: 100%;
         width: 250px;
         height: 250px;
     }
-    .somos:hover img{
+    .contenedor__somos:hover .somos_photo{
         border: 1px solid rgb(248, 34, 34);
         transform: scale(1.2,1.2);
         transition: all .5s;
