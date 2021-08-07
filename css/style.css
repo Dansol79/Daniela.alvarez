@@ -462,12 +462,12 @@ section .title2{
     background-size: cover;
     opacity: .4;
 }
-.photoN{
+.divFlex__photoN{
     width: 200px;
     height: 150px;
     margin: 0 .5em;
 }
-.paragraph{
+.divFlex__paragraph{
     width: 100%;
     color:rgb(155, 151, 151);
     font-size: 13px; 
@@ -486,7 +486,7 @@ span{
     border-bottom: solid 1px #fff;
    
 }
-.titleTres{
+.article__titleTres{
     width: 90px;
     color: #ff0800;
     border-bottom: #fff solid 1px;
@@ -537,12 +537,12 @@ span{
     
    
 } 
-.titleT{
+.divFlexB__titleT{
     color: #ff0800;
     font-size: 1.5em;
     padding: .3em 0;
 }
-.paragraph2{
+.divFlexB__paragraph{
     color: rgb(155, 151, 151);
     margin: .5em .2em;
     font-size: 1em;
@@ -573,7 +573,7 @@ span{
         align-items: center;
         justify-content: center;
     }
-    .paragraph{
+    .divFlex__paragraph{
         width: 45%;
         font-size: 14px;
         border: 1px solid rgb(29, 28, 28);
@@ -604,16 +604,16 @@ span{
     .title2{
         font-size: 2em;
     }
-    .titleTres{
+    .article__titleTres{
         font-size: 1.7em;
         align-self: flex-start;
         margin: 1em;
     }
-    .paragraph{
+    .divFlex__paragraph{
         font-size: .8em;
         margin: 2em 0px;    
     }
-    .photoN{
+    .divFlex__photoN{
         width: 300px;
         height: 200px;
         margin: 2em 0px;    
@@ -637,7 +637,7 @@ span{
         flex-wrap: wrap;
     } 
 
-    .paragraph2{
+    .divFlexB__paragraph{
         color: rgb(155, 151, 151);
         margin: 0 .3em;
         font-size: 1.1em;
@@ -663,20 +663,20 @@ span{
         background-color: #222;
         border: 1px solid #333;
     }
-    .titleTres{
+    .article__titleTres{
         margin-left: 1.5em;
     }
     .divFlexB{
         width: 20%;
         height: 600px;
     }
-    .paragraph2{
+    .divFlexB__paragraph{
         font-size: 1.2em;
     }
 }
 /*seccion primera Contacto*/
 
-.card{
+.seccion__card{
     background-color: #333;
     width: 95%;
     height: 600px;
@@ -689,7 +689,7 @@ span{
 }
 
 
-.cardRight{
+.card__Right{
     width: 100%;
     padding: 0 1rem;
     background-color: rgb(26, 25, 25);
@@ -702,20 +702,20 @@ span{
     justify-content: space-between;
     height: 500px;
 }
-.formCon{
+.form__Con{
     display: flex;
     flex-direction: column;
 }
-.formNames{
+.form__Names{
     display: flex;
     justify-content:space-between;
 }
-.formNames input{
+.form__Names input{
     width: 80px;
 }
 
 @media screen and (min-width: 480px){
-    .cardLeft{
+    .card__Left{
         background-image:url(../images/crossfitcajon-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -723,36 +723,36 @@ span{
         width: 30%;
         display: flex;
     } 
-    .cardRight{
+    .card__Right{
         width: 70%;
         padding: 0 1rem;
         background-color: rgb(26, 25, 25);
     
     }
-    .formNames input {
+    .form__Names input {
         width: 70%; 
         margin: 0 .8em;
     }
 }
 @media screen and (min-width:768px){
-    .formNames input {
+    .form__Names input {
         width: 90%;
     }
 }
 
 @media screen and (min-width: 1024px){
     
-    .card{
+    .seccion__card{
         width: 80%;
     }
-    .formNames{
+    .form__Names{
         display: flex;
         justify-content:space-between;
     }
-     .formNames input{
+     .form__Names input{
         width: 250px;
     } 
-    .cardLeft{
+    .card__Left{
         width: 30%;
         display: flex;
         background-color: #222;
