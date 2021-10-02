@@ -18,84 +18,107 @@
     <link rel="stylesheet" href="../css/style.css">
     <!--Fuentes-->
     <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
-    <link href = "https: //fonts.googleapis.com/css2? family = Roboto & display = swap "rel =" stylesheet ">
+    <!-- <link href = "https: //fonts.googleapis.com/css2? family = Roboto & display = swap "rel =" stylesheet "> -->
     <!--Icons-->
     <script src="https://kit.fontawesome.com/51cf3e0417.js" crossorigin="anonymous"></script>
-
 </head>
 
-<body>
-    <header class="heard">
-        <div class="head_img">
-            <img src="/images/logo2.ico" class="logo" alt="personas con pesas">
-        </div> 
-        <nav class="navMenu">
-            <input type="checkbox" id="btn-menu">
-            <label for="btn-menu"><i class="fas fa-bars"></i></label>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="../index.html" class="enlace">Inicio</a>
+<body id="body">
+    <header class="header">
+        <nav class="nav">
+                <img src="/images/logo2.ico" class="logo" alt="personas con pesas">
+            <button id="btn-menu" class="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+                <ul  class="menu">
+                    <li class="menuItem">
+                        <a href="../index.html" class="nav-menu-link nav-link ">Inicio</a>
                     </li>
-                    <li>
-                        <a href="nuestro-equipo.html" class="enlace">Nuestro Equipo</a>
+                    <li class="menuItem">
+                        <a href="/pages/nuestro-equipo.html" class="nav-menu-link nav-link ">Nuestro Equipo</a>
                     </li>
-                    <li>
-                        <a href="nuestros-trabajos.html" class="enlace">Nuestros trabajos</a>
-                     </li>
-                    <li>
-                        <a href="servicios.html" class="enlace">Servicios</a>
+                    <li class="menuItem">
+                        <a href="/pages/nuestros-trabajos.html" class="nav-menu-link nav-link ">Nuestros trabajos</a>
                     </li>
-                    <li>
-                        <a href="contactanos.html" class="enlace">Contactanos</a>
+                    <li class="menuItem">
+                        <a href="/pages/servicios.html" class="nav-menu-link nav-link ">Servicios</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="/pages/contactanos.html" class="nav-menu-link nav-link ">Contactanos</a>
                     </li>
                 </ul>
-            </div>
         </nav>
-    </header>
+    </header> 
 <!--------------------------Primera Seccion---------------------->
-    <section class="card">
-        <div class="cardLeft">
-        </div>
-        <div class="cardRight">
-            <h2 class="titleDos">Contactanos</h2>
-            <form action="" class="form">
-                <!--Formulario-->
-                <div class="formNames">
-                    <div class="formCon">
-                        <label for="name" class="labelf">Nombre</label>
-                        <input type="text" id="name" name="name" class="inputf">
+<section>
+    <div class="photoContacto">
+    </div> 
+</section>
+<section class="section">
+        
+    <h2 class="seccion__titleSecond">Turnos <span> online</span></h2>
+    <div class="seccionForm">
+        <div class="seccion__contenedor1" id="contenido">
+            <div id="agregar-cita">
+                <form action="" id="nueva-cita" class="form">
+                    <h3 class="seccion__titleTres"> <span>Datos del</span> paciente</h3>
+                    <div class="form__label">
+                        <label for="paciente">Nombre</label>
+                        <input type="text" id="paciente" name="paciente" placeholder="Tu nombre aqui">
                     </div>
-                    <div class="formCon">
-                        <label for="surName" class="labelf">Apellido</label>
-                        <input type="text" id="surName" name="surName" class="inputf">
+                    <div class="form__label">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="suApellido" placeholder="Tu apellido">
                     </div>
-                </div>
-                <div class="formCon">
-                    <label for="phone" class="labelf">Telefono</label>
-                    <input type="tel" id="phone" name="phone" class="inputf">
-                </div>
-                <div class="formCon">
-                    <label for="suEmail" class="labelf">Email</label>
-                    <input type="email" id="suEmail" name="email" class="inputf">
-                </div>
-                <div class="formCon">
-                    <label for="message" class="labelf">Mensajes</label>
-                    <textarea class="textF" name="message" id="message" cols="30" rows="10" minlength="3"
-                        maxlength="150"></textarea>
-                </div>
-                <!--Boton Enviar y Reset-->
-                <div class="formNames">
-                    <input type="submit" id="btn" value="Enviar" class="btn">
-                    <input type="reset" id="clear" value="Limpiar" class="btn">
-                </div>
-            </form>
+                    <div class="form__label">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="suEdad" placeholder="Tu edad">
+                    </div>
+                    <div class="form__label">
+                        <label for="telefono">Telefono</label>
+                        <input type="number" id="telefono" name="suTelefono" placeholder="Ej. (011)..">
+                    </div>
+                    <div class="form__label">
+                        <label for="fecha">fecha</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    <div class="form__label">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
+                    <div class="form__label">
+                        <label for="objetivos">Objetivos</label>
+                        <textarea name="objetivos" id="objetivo"
+                            placeholder="Dejanos un breve mensaje sobre tus objetivos.."></textarea>
+                    </div>
+                    <div class="form__label">
+                        <button type="submit" class="btn" id="btn">Solicitar Turno</button>
+                    </div>
+                    <div id="alertas">
+                        <div class="error" style="display: none;" id="error1">
+                            <p> Todos los campos son requeridos</p>
+                        </div>
+                        <div class="error" style="display: none;" id="error2">
+                            <p> Debes ser mayor de edad para solicitar un turno</p>
+                        </div>
+                        <div class="optimo" style="display: none;" id="success">
+                            <p> Todos tus datos se guardaron con exito</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </section>
- <!--------------------------------------Pie de pagina--------------------------------------->
+        <div id="contenido2" class="seccion__contenedor2  imagen">
+            <h3 id="administra" class="seccion__titleTres">Comprobante <span>de cita</span></h3>
+            <ul id="cita">
+            </ul>
+        </div>
+    </div>
+</section> 
+<!--------------------------------------Pie de pagina--------------------------------------->
  <footer>
     <div class="contenedorr contendFooter">
-        <a href="index.html" class="footer_enlace">Fitness place</a>
+        <a href="../index.html" class="footer_enlace">Fitness place</a>
         <div class="contedPrincipal">
             <a href="https://www.instagram.com">
                 <i class="fab fa-instagram-square"></i>
@@ -115,5 +138,10 @@
         </div>
     </div>
 </footer>
+<script src="../js/appMenu.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/app3.js"></script>
+<script src="../js/app2.js"></script>
 </body>
 </html>

@@ -24,32 +24,29 @@
 </head>
 
 <body>
-    <header class="heard">
-        <div class="head_img">
-            <img src="/images/logo2.ico" class="logo" alt="personas con pesas">
-        </div> 
-        <nav class="navMenu">
-            <input type="checkbox" id="btn-menu">
-            <label for="btn-menu"><i class="fas fa-bars"></i></label>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="../index.html" class="enlace">Inicio</a>
+    <header class="header">
+        <nav class="nav">
+                <img src="/images/logo2.ico" class="logo" alt="personas con pesas">
+            <button id="btn-menu" class="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+                <ul  class="menu">
+                    <li class="menuItem">
+                        <a href="../index.html" class="nav-menu-link nav-link ">Inicio</a>
                     </li>
-                    <li>
-                        <a href="nuestro-equipo.html" class="enlace">Nuestro Equipo</a>
+                    <li class="menuItem">
+                        <a href="/pages/nuestro-equipo.html" class="nav-menu-link nav-link ">Nuestro Equipo</a>
                     </li>
-                    <li>
-                        <a href="nuestros-trabajos.html" class="enlace">Nuestros trabajos</a>
-                     </li>
-                    <li>
-                        <a href="servicios.html" class="enlace">Servicios</a>
+                    <li class="menuItem">
+                        <a href="/pages/nuestros-trabajos.html" class="nav-menu-link nav-link ">Nuestros trabajos</a>
                     </li>
-                    <li>
-                        <a href="contactanos.html" class="enlace">Contactanos</a>
+                    <li class="menuItem">
+                        <a href="/pages/servicios.html" class="nav-menu-link nav-link ">Servicios</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="/pages/contactanos.html" class="nav-menu-link nav-link ">Contactanos</a>
                     </li>
                 </ul>
-            </div>
         </nav>
     </header>
 <!---------------------------------------Seccion 1---------------------------------------------->
@@ -109,7 +106,7 @@
     <!--------------------------------------Pie de pagina--------------------------------------->
     <footer>
         <div class="contenedorr contendFooter">
-            <a href="index.html" class="footer_enlace">Fitness place</a>
+            <a href="../index.html" class="footer_enlace">Fitness place</a>
             <div class="contedPrincipal">
                 <a href="https://www.instagram.com">
                     <i class="fab fa-instagram-square"></i>
@@ -129,6 +126,7 @@
             </div>
         </div>
     </footer>
+    <script src="/js/appMenu.js"></script>
 </body>
 
 </html>
