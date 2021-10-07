@@ -20,7 +20,7 @@ body {
 img{
     max-width: 100%;
 }
-/*Navbar*/
+/*-----------------------Barra de navegacion-----------------------*/
 .header{
     width: 100%;
     height: 80px;
@@ -49,7 +49,7 @@ img{
 }
 
 .menuItem{
-    font-size: 15px;
+    font-size: 14px;
     margin: 6px 6px;
     line-height: 60px;
     text-transform:uppercase;
@@ -135,7 +135,7 @@ img{
    }
 }
 
-/*footer*/
+/*----------------------------footer-------------------------------------*/
 
 .contendFooter{
     display: flex;
@@ -197,7 +197,7 @@ img{
     }
 }
 
-/*seccion primera*/
+/*----------------------------------------seccion primera Inicio-----------------------*/
 
 .seccionPrimera .contenedor{
     display: flex;
@@ -229,7 +229,7 @@ img{
     font-size: 4em;
     text-shadow: red 2px 4px 4px;
 }
-/*Nuestro Equipo seccion 1*/
+/*------------------------------Nuestro Equipo seccion 1-------------------------*/
 
 .titleSecond{
     flex: 0 1 100%;
@@ -333,7 +333,7 @@ img{
 }
 
 
-/* Seccion primera Nuestros trabajos*/
+/*------------------------------------------- Seccion primera Nuestros trabajos----------------*/
 section .title2{
     color: #fff;
     margin: 1em 0;
@@ -407,7 +407,7 @@ section .title2{
 }
 
 
-/* Servivios seccion1 */
+/*--------------------------------------- Servicios seccion1 ----------------------------------------*/
 
 .photo__servicios{
     width: 100%;
@@ -624,7 +624,7 @@ span{
         font-size: 1.2em;
     }
 }
-/*seccion primera Contacto*/
+/*-----------------------------------------SECCION PRIMERA CONTACTO---------------------------------------------*/
 .photoContacto{
     width: 100%;
     height: 400px;
@@ -752,12 +752,14 @@ label{
         width: 50%;
         font-size: 10px;
     }
+    .btn3{
+        font-size: 11px;
+    }
 
-    
 } 
 
 
-/* Seccion 2 */
+/* -------------------------- SECCION 2 -------------------------------*/
 
 .container{
     width: 100%;
@@ -932,5 +934,23 @@ label{
     padding: .3em 2em 0;
     text-transform: capitalize;
 
+}
+.sucursales{
+    width: 100%;
+   
+}
+.btn3{
+    width: 80%;
+    background-color: transparent;
+    border-top: 2px solid #ff0800; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color:#fff ;
+    margin-bottom: 2em;
+    letter-spacing: 1px;
 }
 
