@@ -1,117 +1,60 @@
-eventListeners()
-function eventListeners() {
- // Evento de las propiedades de los objetos 
-    pacientes.addEventListener('change', citas);
-    apellido.addEventListener('change', citas);
-    edad.addEventListener('change', citas); 
-    telefono.addEventListener('change', citas);
-    hora.addEventListener('change', citas) ;
-    fecha.addEventListener('change',citas);
-    objetivo.addEventListener('change', citas);
-}
+form.addEventListener("submit", validar);
 
+// Validacion de datos
 
-function citas (e){
-    
-    datosCita[e.target.name] = e.target.value;
-   
-}
+function validar(e) {
+   e.preventDefault();
 
-function imprimirCita(){
+   if ($("#paciente").val() == "" || $("#apellido").val() == "" || $("#edad").val() == "" || $("#teleono").val() == "" || $("#hora").val() == "" || $("#fecha").val() == "" || $("#objetivo").val() == "") {
 
-  // Crear div
-    const divCita = document.createElement('div');
-    divCita.classList.add('contenedor2');
-  
-// Impresion de datos en pantalla
-    const citaPacientes = document.createElement('p');
-    citaPacientes.classList.add('pacientesCita');
-    citaPacientes.textContent = `Nombre: ${pacientes.value} `;
+      // Envio mensaje de error
+      $("#error1").fadeIn(500).fadeOut(4000);
 
+      // Aparece de nueva la foto x  no hay cita impresa
+      $(`#div${photo.id}`).fadeIn(6000);
 
-    const citaApellido = document.createElement('p');
-    citaApellido.classList.add('pacientesCita');
-    citaApellido.textContent = `Apellido: ${apellido.value} `;
+      return false;
+   }
+   if ($("#edad").val() < 18) {
+      $("#error2").fadeIn(500).fadeOut(6000);
 
-    const citaEdad = document.createElement('p');
-    citaEdad.classList.add('pacientesCita');
-    citaEdad.textContent = `Edad: ${edad.value} `;
+      //   Aparece foto nuevamente
+      $(`#div${photo.id}`).fadeIn(6000);
+      return false;
 
-    const citaTelefono = document.createElement('p');
-    citaTelefono.classList.add('pacientesCita');
-    citaTelefono.textContent = `Telefono: ${telefono.value} `;
+   } else {
 
-    const citaFecha = document.createElement('p');
-    citaFecha.classList.add('pacientesCita');
-    citaFecha.textContent = `Fecha: ${fecha.value} `;
+      $("#success").fadeIn(500).fadeOut(3000);
+      //   Datos optimos imprime sita
+      imprimirCita();
+      //   Desaparece formulario
+      $("#contenido").fadeOut(3000);
 
-    const citaHora= document.createElement('p');
-    citaHora.classList.add('pacientesCita');
-    citaHora.textContent = `Hora: ${hora.value} `;
-
-    const citaObjetivo = document.createElement('p');
-    citaObjetivo.classList.add('pacientesCita');
-    citaObjetivo.textContent = `Objetivos: ${objetivo.value} `;
-
-    // Crear y agregar un boton Elimina
-
-  const btnEliminar = document.createElement('button');
-  btnEliminar.classList.add('btn2');
-  btnEliminar.innerHTML = 'Eliminar';
-
-  const btnImprimir = document.createElement('button');
-  btnImprimir.classList.add('btn2');
-  btnImprimir.innerHTML = 'Imprimir Cita';
-
-//Agregar un evento para boton eliminar e imprimir datos   
-
-   btnEliminar.addEventListener('click', (e) =>{
-   e.target.parentNode.remove();
-  //  Animacion de form cuando se oprima boton eliminar
-   $('#contenido').fadeIn(500);
-   $(`#div${photo.id}`).fadeIn(1000);
-
-      
-  })
-
-  btnImprimir.addEventListener('click', (e) =>{
-    window.print('');
-   
-  })
-
- 
-// Insertar botones y div en DOM
-
-    divCita.appendChild(citaPacientes);
-    divCita.appendChild(citaApellido);
-    divCita.appendChild(citaEdad);
-    divCita.appendChild(citaTelefono);
-    divCita.appendChild(citaFecha);
-    divCita.appendChild(citaHora);
-    divCita.appendChild(citaObjetivo);
-
-    divCita.appendChild(btnEliminar);
-    divCita.appendChild(btnImprimir);
-// Agregar el div al contenedor del html
-    contenedor.appendChild(divCita);
-
-   
-  }
-
- 
-
-function localS(){
-   
-   // obtengo los datos del array del Local 
-  let almacenar = JSON.parse(localStorage.getItem('datosLocal')) || [];
-   // Ingreso el nuevo dato al array
-   almacenar.push(datosCita);
-   // Ingreso los datos alLocalStore
-   let local = JSON.stringify(almacenar);
-   localStorage.setItem('datosLocal', local); 
-   
+   }
+   //   Reiniciar formulario
+   form.reset();
+   // guardo los datos en LocalStorage
+   localS();
 }
 
 
 
 
+
+$(document).ready(() => {
+   //  creando un div para mi objeto de img
+   $("#contenido2").append(`<div id="div${photo.id}">
+                      <image  src=${photo.imagen} class="photos"></image>
+                      </div>`);
+   // Estilos a img creada
+   $(".photos").css({
+      'max-width': '100%',
+      'width': '675px',
+      'height': '100vh',
+      'position': 'relative'
+   });
+   // Evento para el botn que da animacion a img
+   $("#btn").on("click", function () {
+      $(`#div${photo.id}`).slideUp(1000);
+   });
+});

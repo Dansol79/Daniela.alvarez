@@ -239,22 +239,20 @@ img{
     font-size: 1.5em;
     
 }
-.seccionNuestro:hover h2{
-    color:#fff;
-    
-}
-
 
 .titleThird{
     align-items: center;
     color: #f1f0db;
-    font-size: 16px;
+    font-size: 15px;
+    letter-spacing: .1em;
     text-transform: uppercase;
     text-align: center;
 }
 .paragraph1{
     color: #f1f0db;
     font-size: 13px;
+    margin-top: .5em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     text-align: center;
     
@@ -267,69 +265,17 @@ img{
     
 }
 
-.contendorPrincipal{
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items: center;
-    margin-bottom: 2em;
-
-}
-
-.somos img{
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-    margin-bottom: .5em;
-    margin-top: 1.5em;
-    border-radius: 10px;
-    box-shadow: 4px 3px 15px rgb(5, 5, 5);
-}
-.somos:hover img{
-    border: 1px solid rgb(248, 34, 34);
-    transform: scale(1.1,1.1);
-    transition: all .5s;
-} 
-
-
-
-@media screen and (min-width: 480px){
+.somos{
+    display:inline-block;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     
-    .somos{ 
-        
-        text-align: center;
-    } 
-    .somos:hover img{
-        transform: scale(1.1,1.1);  
-    }
 }
-
-@media screen and (min-width:768px){
-    .contendorPrincipal{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    align-items: center;
-    margin-bottom: 3em;
-
-    } 
-    .somos{ 
-        flex: 0 1 calc(33% - 1rem);
-        text-align: center;
-        margin-bottom: 2em;
-    } 
-    .somos img{
-        max-width: 100%;
-        width: 250px;
-        height: 250px;
-    }
-    .somos:hover img{
-        border: 1px solid rgb(248, 34, 34);
-        transform: scale(1.2,1.2);
-        transition: all .5s;
-    }
+.foton:hover {
+    transform: scale(1.2,1.1);  
+    transition: all .5s;
 }
 
 
@@ -701,6 +647,7 @@ label{
     background-color:  #222;   
     margin-bottom: 2em;
     border-radius: 10px;
+    box-shadow: 5px 4px 2px #444;
     
 }
 .form{
@@ -710,13 +657,16 @@ label{
 .form__label{
     display: flex;
     align-items: baseline;
-    justify-content: space-around;
+    justify-content:space-between;
     align-content: stretch;
-    padding: 1em 0;
+    padding: .8em 2em;
     
 }
 .btn{
     width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: transparent;
     border: 1px solid #ff0800;
     box-shadow: 3px 3px 3px rgb(211, 47, 41), 3px 3px 3px rgb(250, 18, 10) ;
@@ -731,6 +681,7 @@ label{
     margin-bottom: 2em;
     background-color:  #222;
     border-radius: 10px;
+    box-shadow: 5px 4px 2px #444;
 }
 
 @media screen and (max-width: 768px){
@@ -763,7 +714,6 @@ label{
 
 .container{
     width: 100%;
-    /* height:600px; */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -952,5 +902,13 @@ label{
     color:#fff ;
     margin-bottom: 2em;
     letter-spacing: 1px;
+}
+
+.sucursales{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
 }
 

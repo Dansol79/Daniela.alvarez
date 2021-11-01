@@ -1,71 +1,103 @@
+eventListeners();
 
+function eventListeners() {
+  // Evento de las propiedades de los objetos
+  pacientes.addEventListener("change", citas);
+  apellido.addEventListener("change", citas);
+  edad.addEventListener("change", citas);
+  telefono.addEventListener("change", citas);
+  hora.addEventListener("change", citas);
+  fecha.addEventListener("change", citas);
+  objetivo.addEventListener("change", citas);
+}
 
+function citas(e) {
+  datosCita[e.target.name] = e.target.value;
+}
 
-form.addEventListener('submit', validar)
+function imprimirCita() {
+  // Crear div
+  const divCita = document.createElement("div");
+  divCita.classList.add("contenedor2");
 
+  // Impresion de datos en pantalla
+  const citaPacientes = document.createElement("p");
+  citaPacientes.classList.add("pacientesCita");
+  citaPacientes.textContent = `Nombre: ${pacientes.value} `;
 
-// Validacion de datos
+  const citaApellido = document.createElement("p");
+  citaApellido.classList.add("pacientesCita");
+  citaApellido.textContent = `Apellido: ${apellido.value} `;
 
-function validar(e){
- 
-    e.preventDefault();
-    
+  const citaEdad = document.createElement("p");
+  citaEdad.classList.add("pacientesCita");
+  citaEdad.textContent = `Edad: ${edad.value} `;
 
-    if($('#paciente').val() =='' || $('#apellido').val() =='' || $('#edad').val() =='' || $('#teleono').val() =='' || $('#hora').val() =='' || $('#fecha').val() ==''|| $('#objetivo').val() ==''){
-   // Envio mensaje de error
-      $('#error1').fadeIn(500).fadeOut(4000);
-      // Aparece de nueva la foto x  no hay cita impresa  
-      $(`#div${photo.id}`).fadeIn(6000);
+  const citaTelefono = document.createElement("p");
+  citaTelefono.classList.add("pacientesCita");
+  citaTelefono.textContent = `Telefono: ${telefono.value} `;
 
-      return false;
-   }
-   if($('#edad').val() < 18){
-  
-     $('#error2').fadeIn(500).fadeOut(6000);
-   //   Aparece foto nuevamente
-     $(`#div${photo.id}`).fadeIn(6000);
-      return false;
-   }else{
-     
-     $('#success').fadeIn(500).fadeOut(3000);
-   //   Datos optimos imprime sita
-        imprimirCita();
-      //   Desaparece formulario
-       $('#contenido').fadeOut(3000);
-   }
-  
-//  Guardar en localStore la informacion
- localS();
+  const citaFecha = document.createElement("p");
+  citaFecha.classList.add("pacientesCita");
+  citaFecha.textContent = `Fecha: ${fecha.value} `;
 
- 
-//   Reiniciar formulario
-form.reset();
-  }
- 
- 
- $(document).ready(() =>{
-    //  creando un div para mi objeto de img
-   $('#contenido2').append(`<div id="div${photo.id}">
-                      <image  src=${photo.imagen} class="photos"></image>
-                      </div>`);
-   // Estilos a img creada
-   $('.photos').css({
-      'max-width':'100%',
-       'width':'675px',
-      'height': '100vh',
-      'border-radius': '5px',
-      'position': 'relative'
+  const citaHora = document.createElement("p");
+  citaHora.classList.add("pacientesCita");
+  citaHora.textContent = `Hora: ${hora.value} `;
 
-   })
-   // Evento para el botn que da animacion a img
-   $('#btn').on('click', function() {
-      $(`#div${photo.id}`).slideUp(1000);
-   })
+  const citaObjetivo = document.createElement("p");
+  citaObjetivo.classList.add("pacientesCita");
+  citaObjetivo.textContent = `Objetivos: ${objetivo.value} `;
 
-  
- });
+  // Crear y agregar un boton Elimina
 
+  const btnEliminar = document.createElement("button");
+  btnEliminar.classList.add("btn2");
+  btnEliminar.innerHTML = "Eliminar";
 
-    
+  const btnImprimir = document.createElement("button");
+  btnImprimir.classList.add("btn2");
+  btnImprimir.innerHTML = "Imprimir Cita";
 
- 
+  //Agregar un evento para boton eliminar e imprimir datos
+
+  btnEliminar.addEventListener("click", (e) => {
+    e.target.parentNode.remove();
+
+    //  Animacion de form cuando se oprima boton eliminar
+    $("#contenido").fadeIn(500);
+
+    $(`#div${photo.id}`).fadeIn(1000);
+    $("#bbtn").fadeIn(800);
+    $(".divClase").fadeOut(1000);
+  });
+
+  btnImprimir.addEventListener("click", (e) => {
+    window.print("");
+  });
+
+  // Insertar botones y div en DOM
+
+  divCita.appendChild(citaPacientes);
+  divCita.appendChild(citaApellido);
+  divCita.appendChild(citaEdad);
+  divCita.appendChild(citaTelefono);
+  divCita.appendChild(citaFecha);
+  divCita.appendChild(citaHora);
+  divCita.appendChild(citaObjetivo);
+
+  divCita.appendChild(btnEliminar);
+  divCita.appendChild(btnImprimir);
+  // Agregar el div al contenedor del html
+  contenedor.appendChild(divCita);
+}
+
+function localS() {
+  // obtengo los datos del array del Local
+  let almacenar = JSON.parse(localStorage.getItem("datosLocal")) || [];
+  // Ingreso el nuevo dato al array
+  almacenar.push(datosCita);
+  // Ingreso los datos alLocalStore
+  let local = JSON.stringify(almacenar);
+  localStorage.setItem("datosLocal", local);
+}
